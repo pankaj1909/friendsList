@@ -98,11 +98,13 @@ const App = (props) => {
                         <div className={'col-sm-10'}>
                             <input type="text" className="form-control" placeholder="Enter your Friend's name"
                                    value={name}
+                                   id={"enterName"}
                                    onKeyPress={(e) => onKeyPressInput(e)}
                                    onChange={(e) => setName(e.target.value)}/>
                         </div>
                         <div className={'col-sm-2'}>
                             <button type="button" className="btn btn-primary"
+                                    id={'submit'}
                                     onClick={(e) => onEnterClick(e)}>
                                 Submit
                             </button>
@@ -113,9 +115,11 @@ const App = (props) => {
                             <div className="input-group">
                                 <input type="text" className="form-control" placeholder="Search By Name"
                                        value={searchName}
+                                       id={'searchName'}
                                        onChange={(e) => onSearchChange(e.target.value)}/>
                                 <div className="input-group-append">
                                     <button className="btn btn-secondary" type="button"
+                                            id={'searchNameClick'}
                                             onClick={() => onOperationClick('search')}>
                                         <i className="fa fa-search"/>
                                     </button>
@@ -123,14 +127,14 @@ const App = (props) => {
                             </div>
                         </div>
                         <div className={'col-sm-6'}>
-                            <button type="button" className="btn btn-light" onClick={e => onFavoriteClick(e)}>Sort By
+                            <button type="button" className="btn btn-light" id="onFavoriteClick" onClick={e => onFavoriteClick(e)}>Sort By
                                 Favorite
                             </button>
                         </div>
                     </div>
 
-                    {notification && <div className="alert alert-success mt-2 col-sm-12" role="alert">
-                        {notification}
+                    {notification && <div className="alert alert-success mt-2 col-sm-12" role="alert" >
+                        <span id={'notification'}>{notification}</span>
                     </div>}
                     <div className="card-text mt-2 col-sm-12">
                         {listData && listData.map((item) => {

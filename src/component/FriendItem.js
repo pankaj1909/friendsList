@@ -9,11 +9,11 @@ function FriendItem(props) {
                 <div>is your friend</div>
             </div>
             <div className={'col-sm-6 row'}>
-                <div className={'col-sm-2 border-dark'} onClick={() => props.onOperationClick('favorite', id)}>
+                <div className={'col-sm-2 border-dark'} id={'favorite[' + id + ']'} onClick={() => props.onOperationClick('favorite', id)}>
                     {!favorite && <i className="far fa-star"/>}
                     {favorite && <i className="fas fa-star"/>}
                 </div>
-                <div className={'col-sm-2 border-dark'} onClick={() => props.onOperationClick('delete', id)}>
+                <div className={'col-sm-2 border-dark'} id={'delete[' + id + ']'} onClick={() => props.onOperationClick('delete', id)}>
                     <i className="far fa-trash-alt"/>
                 </div>
             </div>

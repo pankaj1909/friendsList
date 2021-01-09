@@ -1,6 +1,6 @@
 module.exports = {
     bail: false,
-    silent: false,
+    silent: true,
     clearMocks: true,
     coverageDirectory: "coverage",
     coverageReporters: ["text", "html", "cobertura"],
@@ -15,8 +15,8 @@ module.exports = {
     verbose: false,
     watchman: true,
     collectCoverageFrom: [
-        "<rootDir>/src/components/**/*.js",
-        "<rootDir>/src/containers/**/*.js"
+        "<rootDir>/src/component/**/*.js",
+        "<rootDir>/src/App.js",
     ],
     moduleNameMapper: {
         "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
