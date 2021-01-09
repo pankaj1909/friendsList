@@ -1,0 +1,4 @@
+export const DATA_LOADED = 'DATA_LOADED'
+export const DATA_UPDATED = 'DATA_UPDATED'
+export const DATA_UPDATED_BOTH = 'DATA_UPDATED_BOTH'
+export const DATA_ERROR = 'DATA_ERROR'
